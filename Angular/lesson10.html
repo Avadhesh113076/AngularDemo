@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th ng-click="sortData('name')">Name <div ng-class="getSortClass('name')"></div></th>
+                    <th ng-click="sortData('dateOfBirth')">DateOfBirth<div ng-class="getSortClass('dateOfBirth')"></div></th>
+                    <th ng-click="sortData('gender')">Gender <div ng-class="getSortClass('gender')"></div></th>
+                    <th ng-click="sortData('salary')">Salary<div ng-class="getSortClass('salary')"></div></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+            	
+                    <tr ng-repeat="employee in employees | orderBy:sortColumn:reverseSort">
+            		<td>{{employee.name | uppercase}}</td>
+            		<td>{{employee.dateOfBirth |date:"dd/mm/yyyy"}}</td>
+            		<td>{{employee.gender | lowercase}}</td>
+            		<td>{{employee.salary |number:2}}</td>
+            	
+            	</tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/script10.js"></script>
+</body>
+
+</html>

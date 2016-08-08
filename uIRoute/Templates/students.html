@@ -1,0 +1,11 @@
+<h1>List of students</h1>
+Name:<input type="text" ng-model="studentsCtrl.name"/>
+<button ng-click="studentsCtrl.searchStudents()">Search</button>
+<ul>
+	<li ng-repeat="student in studentsCtrl.students">
+	<a ui-sref="studentDetails({id: student.id})">
+		{{student.bookName}}
+	</a>
+	</li>
+</ul>
+<button ng-click="studentsCtrl.reloadData()">Reload Data</button>

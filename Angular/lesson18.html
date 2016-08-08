@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+    <input type="checkbox" ng-model="hideSalary"/>Hide Salary
+    <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>BookName</th>
+                    <th>Price</th>
+                    <th>Author</th> 
+                    <th>email</th>
+                    <th>phone</th>
+                    <th>Published</th> 
+                </tr>
+            </thead>
+            <tbody>
+        
+                    
+                    <tr ng-repeat="employee in employees">
+            		<td>{{employee.id }}</td>
+            		<td>{{employee.bookName}}</td>
+                    <td>{{employee.price}}</td>
+            		<td>{{employee.publisherName }}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.phone}}</td>
+                    <td>{{employee.published}}</td>
+            		
+            	</tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/script18.js"></script>
+</body>
+
+</html>

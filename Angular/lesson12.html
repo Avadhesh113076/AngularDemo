@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+    	<!-- <input type="text" placeholder="search name" ng-model="searchText.name"/>
+                <input type="text" placeholder="search city" ng-model="searchText.city"/>
+                <input type="checkbox" ng-model="exactMatch"/>Exact Match -->
+         <input type="text" placeholder="search name and city" ng-model="searchText"/>       
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nmae</th>
+                    <th>City</th>
+                    <th>Gender</th>
+                    <th>Salary(Number Filter)</th>
+                    <th>Salary(Currency Filter)</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                    <!-- <tr ng-repeat="employee in employees |filter:searchText:exactMatch"> -->
+                    <tr ng-repeat="employee in employees |filter:search">
+            		<td>{{employee.name }}</td>
+            		<td>{{employee.city }}</td>
+            		<td>{{employee.gender | lowercase}}</td>
+            		<td>{{employee.salary |number:2}}</td>
+            		<td>{{employee.salary |currency:"#":1}}</td>
+            	</tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/script12.js"></script>
+</body>
+
+</html>

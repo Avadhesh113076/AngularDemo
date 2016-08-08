@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nmae</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+        
+                    
+                    <tr ng-repeat="employee in employees">
+            		<td>{{employee.name }}</td>
+            		<td>{{employee.gender | gender}}</td>
+            		<td>{{employee.salary }}</td>
+            		
+            	</tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/script13.js"></script>
+</body>
+
+</html>

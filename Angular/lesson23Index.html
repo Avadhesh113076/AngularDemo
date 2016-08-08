@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <base href="/" />
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="Js/angular.min.js"></script>
+    <script src="Js/angular-route.min.js"></script>
+</head>
+<body ng-app="myModule">
+        <table class="font-family:Arial">
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>Website Header</h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftMenu">
+                <a href="home">Home</a>
+                <a href="cources">Cources</a>
+                <a href="students">Students</a>
+                </td>
+                <td class="MainContent">
+                    <ng-view></ng-view>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <b>Website Footer</b>
+                </td>
+            </tr>
+        </table>
+    <script src="Js/script23.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+
+    <!--  <div 
+        ng-init="employees =[
+           { name: 'sara', gender: "Male",city:"Varansi", salary: 45000.788 },
+           { name: 'mark', gender: "Female",city:"Jaunpur", salary: 35000.788 },
+           { name: 'pam',gender: "Male",city:"Lucknow", salary: 25000.788 },
+           { name: 'Todd', gender: "Female",city:"Allahabad", salary: 15000.788 },
+       ]">  -->
+     <div ng-controller="myController">
+        <ul>
+            <li ng-repeat="country in countries" ng-init="parentIndex=$index">
+                {{country.name}}
+                <ul>
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}}-ParentIndex={{parentIndex}},Index={{$index}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+   <script src="Js/script15.js"></script> 
+</body>
+
+</html>

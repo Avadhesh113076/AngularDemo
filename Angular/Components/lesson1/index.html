@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+
+<body ng-app="heroApp">
+    <!-- components match only elements -->
+    <div ng-controller="MainCtrl as ctrl">
+        <b>Hero</b>
+        <br>
+        <hero-detail bind="ctrl.hero"></hero-detail><br>
+        {{ctrl.hero.name}}
+    </div>
+    <script src="../Js/lesson1/index.js"></script>
+    <script src="../Js/lesson1/heroDetail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/angular.min.js"></script>
+</head>
+
+<body ng-app="myModule">
+    <div ng-controller="redColorController">
+        Root Scoop <Color:>{{rootScoopColor}}<br>
+        Red color controller:{{redColor}}<br>
+        Green color controller:<span style="color:red;" ng-show="greenColor==undefined">
+            greenColor is undefined
+        </span>
+    </div><br>
+
+    <div ng-controller="greenColorController">
+        Root Scoop <Color:>{{rootScoopColor}}<br>
+        Green color controller:{{greenColor}}<br>
+        Red color controller:<span style="color:red;" ng-show="redColor==undefined">
+            redColor is undefined
+        </span>
+    </div><br>
+
+    <script src="Js/script37.js"></script>
+</body>
+
+</html>

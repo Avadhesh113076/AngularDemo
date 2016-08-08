@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/angular.min.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+    	<!-- Rows to display:<input type="number" step="1"  min="1" max="5" ng-model="rowLimit"/> -->
+        Sort By<select ng-model="selectColumn">
+            <option value="name">Name ASC</option>
+            <option value="gender">Gender ASC</option>
+            <option value="dateOfBirth">DateOfBirth ASC</option>
+            <option value="-salary">Salary DESC</option>
+        </select>
+    	<br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nmae</th>
+                    <th>DateOfBirth</th>
+                    <th>Gender</th>
+                    <th>Salary(Number Filter)</th>
+                    <th>Salary(Currency Filter)</th>
+                </tr>
+            </thead>
+            <tbody>
+            	<!-- <tr ng-repeat="employee in employees | limitTo:rowLimit:0"> -->
+                    <!-- <tr ng-repeat="employee in employees | orderBy:'+name'"> -->
+                    <tr ng-repeat="employee in employees | orderBy:selectColumn">
+            		<td>{{employee.name | uppercase}}</td>
+            		<td>{{employee.dateOfBirth |date:"dd/mm/yyyy"}}</td>
+            		<td>{{employee.gender | lowercase}}</td>
+            		<td>{{employee.salary |number:2}}</td>
+            		<td>{{employee.salary |currency:"#":1}}</td>
+            	</tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>
